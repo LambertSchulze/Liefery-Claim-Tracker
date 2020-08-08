@@ -12,7 +12,7 @@ function App() {
           </div>
           <div className="card-body">
             <div className="table-responsive">
-            <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -38,7 +38,7 @@ function App() {
             </div>
             <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New Claim</button>
 
-            <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog" role="document">
                 <div className="modal-content">
                   <div className="modal-header">
