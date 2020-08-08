@@ -3,22 +3,23 @@ import React from 'react';
 function App() {
   return (
     <main>
-      <div class="container-fluid">
-        <h1 class="mt-4">Dashboard</h1>
-        <div class="card mb-4">
-          <div class="card-header">
-          <i class="fas fa-table mr-1"></i>
+      <div className="container-fluid">
+        <h1 className="mt-4">Dashboard</h1>
+        <div className="card mb-4">
+          <div className="card-header">
+          <i className="fas fa-table mr-1"></i>
             Claims
           </div>
-          <div class="card-body">
-            <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <div className="card-body">
+            <div className="table-responsive">
+            <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Open Date</th>
                         <th>Liefery-ID</th>
                         <th>Courier Name</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,13 +28,18 @@ function App() {
                         <td>08.08.2020</td>
                         <td>ABCDE-12345</td>
                         <td>Paul Sänker</td>
+                        <td>
+                          <button type="button" className="btn btn-outline-primary btn-sm mx-1">Edit</button>
+                          <button type="button" className="btn btn-outline-primary btn-sm mx-1">Close</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+          <button type="button" className="btn btn-primary">New Claim</button>
           </div>
         </div>
       </div>
-    </div>
     </main>
   );
 }
