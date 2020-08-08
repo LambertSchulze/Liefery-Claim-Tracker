@@ -56,7 +56,7 @@ function App() {
                     </div>
                     <div className="input-group mb-3">
                       <div className="input-group-prepend">
-                        <span className="input-group-text">Corier Name</span>
+                        <span className="input-group-text">Courier Name</span>
                       </div>
                       <input type="text" class="form-control" placeholder="Corier Full Name" />
                     </div>
