@@ -1,3 +1,5 @@
+<img src="assets/liefery-logo.png" align="right"/>
+
 # Liefery-Claim-Tracker
 A ticket system for working with claims. It's custom designed for Liefery and their internal workflow.
 
