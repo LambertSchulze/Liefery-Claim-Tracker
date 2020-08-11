@@ -1,30 +1,24 @@
-import React from 'react';
-import ClaimList from './components/ClaimList'
-import NewClaimModal from './components/NewClaimModal';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom'
 
-function App() {
+import DashboardPage from './pages/DashboardPage'
+import ClaimPage from './pages/ClaimPage'
+
+const App = () => {
   return (
-    <main>
-      <div className="container-fluid">
-        <h1 className="mt-4">Dashboard</h1>
-        
-        {/* CARD CLAIMLIST */}
-        <div className="card mb-4">
-          <div className="card-header">
-            <i className="fas fa-table mr-1"></i>
-            Claims
-          </div>
-          <div className="card-body">
-            <div className="table-responsive">
-              <ClaimList />
-            </div>
-            <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New Claim</button>
-            <NewClaimModal />
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+    <Router>
+      <Switch>
+        <Route exact path="/" component={DashboardPage} />
+        <Route exact path="/claims" component={ClaimsPage} />
+        <Redirect to="/" />
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
