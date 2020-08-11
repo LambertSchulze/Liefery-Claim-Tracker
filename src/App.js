@@ -11,7 +11,7 @@ function App() {
         {/* CARD CLAIMLIST */}
         <div className="card mb-4">
           <div className="card-header">
-          <i className="fas fa-table mr-1"></i>
+            <i className="fas fa-table mr-1"></i>
             Claims
           </div>
           <div className="card-body">
