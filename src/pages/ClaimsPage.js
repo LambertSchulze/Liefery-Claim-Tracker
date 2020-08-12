@@ -14,8 +14,8 @@ const ClaimsPage = ({ dispatch, loading, claims, hasErrors }) => {
     }
 
     return (
-        <section>
-            <h1>Claims</h1>
+        <section className="container-fluid">
+            <h1 className="mt-4">Claims</h1>
             {renderClaim()}
         </section>
     )

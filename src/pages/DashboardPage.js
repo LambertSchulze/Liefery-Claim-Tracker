@@ -6,7 +6,7 @@ import NewClaimModal from '../components/NewClaimModal'
 
 const DashboardPage = () => (
     <main>
-        <div className="container-fluid">
+        <section className="container-fluid">
             <h1 className="mt-4">Dashboard</h1>
 
             {/* CARD CLAIMLIST */}
@@ -23,7 +23,7 @@ const DashboardPage = () => (
                 <NewClaimModal />
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 )
 
