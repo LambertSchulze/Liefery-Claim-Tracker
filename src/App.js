@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import DashboardPage from './pages/DashboardPage'
-import ClaimPage from './pages/ClaimPage'
+import ClaimsPage from './pages/ClaimsPage'
 
 const App = () => {
   return (
