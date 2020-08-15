@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Claim = ({claim}) => (
     <article className="">
-        <h2>{claim.title}</h2>
+        <h4>{claim.title}</h4>
         <p>{claim.title}</p>
     </article>
 )
