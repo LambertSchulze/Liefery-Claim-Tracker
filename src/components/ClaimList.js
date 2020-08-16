@@ -1,29 +1,24 @@
 import React from 'react'
+import { ClaimListRow } from '../components/ClaimListRow'
 
-const ClaimList = () => (
-    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Open Date</th>
-                <th>Liefery-ID</th>
-                <th>Courier Name</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>08.08.2020</td>
-                <td>ABCDE-12345</td>
-                <td>Paul Sänker</td>
-                <td>
-                  <button type="button" className="btn btn-outline-primary btn-sm mx-1">Edit</button>
-                  <button type="button" className="btn btn-outline-primary btn-sm mx-1">Close</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-)
+const ClaimList = ({claims}) => {
+    return (
+        <table className="mdl-data-table mdl-js-data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th className="mdl-data-table__cell--non-numeric">Status</th>
+                    <th className="mdl-data-table__cell--non-numeric">Open Date</th>
+                    <th className="mdl-data-table__cell--non-numeric">Liefery-ID</th>
+                    <th className="mdl-data-table__cell--non-numeric">Courier Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {claims.map((claim) => <ClaimListRow key={claim.id} claim={claim} />)}
+            </tbody>
+        </table>
+    )
+}
 
 export default ClaimList

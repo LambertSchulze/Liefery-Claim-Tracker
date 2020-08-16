@@ -1,30 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import ClaimList from '../components/ClaimList'
-import NewClaimModal from '../components/NewClaimModal'
 
-const DashboardPage = () => (
-    <main>
-        <section className="container-fluid">
-            <h1 className="mt-4">Dashboard</h1>
-
-            {/* CARD CLAIMLIST */}
-            <div className="card mb-4">
-                <div className="card-header">
-                    <i className="fas fa-table mr-1"></i>
-                    Claims
-                </div>
-                <div className="card-body">
-                    <div className="table-responsive">
-                        <ClaimList />
-                    </div>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New Claim</button>
-                <NewClaimModal />
-                </div>
+const DashboardPage = ({claims}) => (
+    <main className="mdl-layout__content mdl-grid">
+        <section className="mdl-card mdl-shadow--6dp mdl-cell mdl-cell--12-col">
+            <div className="mdl-card__title">
+                <h2 className="mdl-card__title-text">Open Claims</h2>
+            </div>
+            <div className="mdl-card__media">
+                {<ClaimList claims={claims}/>}
             </div>
         </section>
     </main>
 )
 
-export default DashboardPage
+const mapStateToProps = (state) => ({
+    claims: state.claims.claims,
+})
+
+export default connect(mapStateToProps)(DashboardPage)
