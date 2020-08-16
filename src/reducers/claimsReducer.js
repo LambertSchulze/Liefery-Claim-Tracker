@@ -1,7 +1,20 @@
 import * as actions from '../actions/claimsActions'
 
 export const initialState = {
-    claims:     [],
+    claims:     [{
+        claimID:        1,
+        status:         'opened',
+        openDate:       '01.01.2020',
+        lieferyID:      'ABCDE/12345',
+        courierName:    'Josip Ramljak',
+    },
+    {
+        claimID:        2,
+        status:         'übergeben',
+        openDate:       '02.02.2020',
+        lieferyID:      'FGHIJ/67890',
+        courierName:    'Mehmet Kaplan',
+    }],
     loading:    false,
     hasErrors:  false,
 }
