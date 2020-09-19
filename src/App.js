@@ -1,30 +1,17 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect,
-} from 'react-router-dom'
+import Claim from './components/Claim'
 
-import { Navbar } from './components/Navbar'
-import { NavbarDrawer } from './components/NavbarDrawer'
-import DashboardPage from './pages/DashboardPage'
-import ClaimsPage from './pages/ClaimsPage'
-
-const App = () => {
-    return (
-        <Router>
-            <div className="mdl-layout mdl-js-layout">
-                <Navbar />
-                <NavbarDrawer />
-                <Switch>
-                    <Route exact path="/" component={DashboardPage} />
-                    <Route exact path="/claims" component={ClaimsPage} />
-                    <Redirect to="/" />
-                </Switch>
-            </div>
-        </Router>
-    )
+const App = ({ claims }) => {
+  return (
+    <div>
+      <h1>Claims</h1>
+      <ul>
+        {claims.map(claim => 
+          <Claim key={claim.id} claim={claim}/>
+        )}
+      </ul>
+    </div>
+  )
 }
 
-export default App
+export default App 

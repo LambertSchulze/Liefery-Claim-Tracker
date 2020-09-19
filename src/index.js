@@ -1,20 +1,29 @@
-// External Imports
-import React from 'react';
-import { render } from 'react-dom';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-// Local Imports
-import App from './App';
-import rootReducer from './reducers';
+const claims = [
+  {
+    id: 1,
+    description: 'Empfänger meldet Nichterhalt',
+    openDate: '2020-04-01T17:30:31.098Z',
+    closed: true
+  },
+  {
+    id: 2,
+    description: 'Nachbar nicht bekannt',
+    openDate: '2020-05-01T18:39:34.091Z',
+    closed: false
+  },
+  {
+    id: 3,
+    description: 'Pünktlich liefern',
+    openDate: '2020-06-01T19:20:14.298Z',
+    closed: false
+  }
+]
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
-
-render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('root')
+ReactDOM.render(
+  <App claims={claims} />,
+  document.getElementById('root')
 )
