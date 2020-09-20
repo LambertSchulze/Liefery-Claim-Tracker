@@ -1,15 +1,11 @@
 import React from 'react'
-import Claim from './components/Claim'
+import ClaimTable from './components/ClaimTable'
 
 const App = ({ claims }) => {
   return (
     <div>
       <h1>Claims</h1>
-      <ul>
-        {claims.map(claim => 
-          <Claim key={claim.id} claim={claim}/>
-        )}
-      </ul>
+      <ClaimTable claims={claims} />
     </div>
   )
 }
