@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ClaimTable = ({ claims }) => {
+const ClaimsTable = ({ claims }) => {
   return (
     <table>
       <thead>
@@ -23,4 +23,4 @@ const ClaimTable = ({ claims }) => {
   )
 }
 
-export default ClaimTable
+export default ClaimsTable

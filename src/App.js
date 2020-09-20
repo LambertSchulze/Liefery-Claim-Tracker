@@ -1,11 +1,13 @@
-import React from 'react'
-import ClaimTable from './components/ClaimTable'
+import React, { useState } from 'react'
+import ClaimsTable from './components/ClaimsTable'
 
-const App = ({ claims }) => {
+const App = (props) => {
+  const [claims, setClaims] = useState(props.claims)
+
   return (
     <div>
       <h1>Claims</h1>
-      <ClaimTable claims={claims} />
+      <ClaimsTable claims={claims} />
     </div>
   )
 }
