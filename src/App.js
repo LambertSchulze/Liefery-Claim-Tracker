@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ClaimsTable from './components/ClaimsTable'
+import FilteredClaimsTable from './components/FilteredClaimsTable'
 import NewClaimForm from './components/NewClaimForm'
 
 const App = (props) => {
@@ -8,7 +8,7 @@ const App = (props) => {
   return (
     <div>
       <h1>Claims</h1>
-      <ClaimsTable claims={claims} />
+      <FilteredClaimsTable claims={claims} />
       <NewClaimForm claims={claims} setClaims={setClaims} />
     </div>
   )
