@@ -18,7 +18,7 @@
       "category": "Claim",
       "description_internally": "Nachbar nicht bekannt",
       "deadline": "2020-05-03",
-      "status": "an DL übergeben",
+      "status": "geschlossen",
       "shipment": {
         "id": 123457,
         "reference_code": "12345-ABCDE"
@@ -30,7 +30,7 @@
       "category": "Claim",
       "description_internally": "Pünktlich liefern",
       "deadline": "2020-06-02",
-      "status": "1. Erinnerung",
+      "status": "geschlossen",
       "shipment": {
         "id": 123458,
         "reference_code": "54321-AMBCN"
@@ -39,18 +39,42 @@
     {
       "id": 4,
       "open_date": "Tue Sep 22 2020",
-      "status": "geöffnet",
+      "status": "geschlossen",
       "shipment": {
         "reference_code": "aoeu"
       }
     },
     {
       "open_date": "Tue Sep 22 2020",
-      "status": "geöffnet",
+      "status": "geschlossen",
       "shipment": {
         "reference_code": "Hallo"
       },
       "id": 5
+    },
+    {
+      "open_date": "Tue Sep 22 2020",
+      "status": "geschlossen",
+      "shipment": {
+        "reference_code": "Reference Code of Shipment"
+      },
+      "id": 6
+    },
+    {
+      "open_date": "Tue Sep 22 2020",
+      "status": "geschlossen",
+      "shipment": {
+        "reference_code": "Reference Code of Shipment"
+      },
+      "id": 7
+    },
+    {
+      "open_date": "Tue Sep 22 2020",
+      "status": "geschlossen",
+      "shipment": {
+        "reference_code": "Reference Code of Shnthipment"
+      },
+      "id": 8
     }
   ]
 }

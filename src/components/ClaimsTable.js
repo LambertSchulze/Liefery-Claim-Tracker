@@ -1,6 +1,7 @@
+import axios from 'axios'
 import React from 'react'
 
-const ClaimsTable = ({ claims }) => {
+const ClaimsTable = ({ claims, toggleClaimStatus }) => {
   return (
     <table>
       <thead>
@@ -8,6 +9,7 @@ const ClaimsTable = ({ claims }) => {
           <th>Deadline</th>
           <th>Status</th>
           <th>Sendungs-Link</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -16,6 +18,11 @@ const ClaimsTable = ({ claims }) => {
             <td>{claim.deadline}</td>
             <td>{claim.status}</td>
             <td>{claim.shipment.reference_code}</td>
+            <td>
+              <button onClick={() => toggleClaimStatus(claim.id)}>
+                {claim.status === 'geschlossen' ? 'wieder öffnen' : 'Claim schließen'}
+              </button>
+            </td>
           </tr>
         )}
       </tbody>
