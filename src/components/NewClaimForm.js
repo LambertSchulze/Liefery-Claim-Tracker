@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const NewClaimForm = ({ claims, setClaims }) => {
-  const [newClaim, setNewClaim] = useState('Reference Code of Shipment')
+  const newClaimInitialValue = 'Reference Code of Shipment'
+  const [newClaim, setNewClaim] = useState(newClaimInitialValue)
   
   const addClaim = (event) => {
     event.preventDefault()
-
     const newClaimObject = {
-      id: claims.length + 1,
       open_date: new Date().toDateString(),
       status: 'geöffnet',
       shipment: {
@@ -15,8 +15,12 @@ const NewClaimForm = ({ claims, setClaims }) => {
       }
     }
 
-    setClaims(claims.concat(newClaimObject))
-    setNewClaim('Reference Code of Shipment')
+    axios
+      .post('http://localhost:3001/claims', newClaimObject)
+      .then(res => {
+        setClaims(claims.concat(res.data))
+        setNewClaim(newClaimInitialValue)
+      })
   }
 
   const handleNewClaimChange = (event) => {

@@ -1,4 +1,4 @@
-{  
+{
   "claims": [
     {
       "id": 1,
@@ -35,6 +35,22 @@
         "id": 123458,
         "reference_code": "54321-AMBCN"
       }
+    },
+    {
+      "id": 4,
+      "open_date": "Tue Sep 22 2020",
+      "status": "geöffnet",
+      "shipment": {
+        "reference_code": "aoeu"
+      }
+    },
+    {
+      "open_date": "Tue Sep 22 2020",
+      "status": "geöffnet",
+      "shipment": {
+        "reference_code": "Hallo"
+      },
+      "id": 5
     }
   ]
 }
