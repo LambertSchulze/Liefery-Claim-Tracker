@@ -9,7 +9,7 @@ const FilteredClaimsTable = ({ claims, toggleClaimStatus }) => {
   return (
     <div>
       <button onClick={() => setShowClosed(!showClosed)}>
-        geschlossene Claims {showClosed ? 'anzeigen' : 'ausblenden'}
+        geschlossene Claims {showClosed ? 'ausblenden' : 'anzeigen'}
       </button>
       <ClaimsTable claims={claimsToShow} toggleClaimStatus={toggleClaimStatus}/>
     </div>
