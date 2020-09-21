@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import FilteredClaimsTable from './components/FilteredClaimsTable'
 import NewClaimForm from './components/NewClaimForm'
 
-const App = (props) => {
-  const [claims, setClaims] = useState(props.claims)
+const App = () => {
+  const [claims, setClaims] = useState([])
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:3001/claims')
+      .then(res => {
+        setClaims(res.data)
+      })
+  }, [])
 
   return (
     <div>
