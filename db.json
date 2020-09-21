@@ -6,7 +6,7 @@
       "category": "Claim",
       "description_internally": "Empfänger meldet Nichterhalt",
       "deadline": "2020-04-03",
-      "status": "geschlossen",
+      "status": "wieder geöffnet",
       "shipment": {
         "id": 123456,
         "reference_code": "ABCDE-12345"
@@ -75,6 +75,14 @@
         "reference_code": "Reference Code of Shnthipment"
       },
       "id": 8
+    },
+    {
+      "open_date": "Tue Sep 22 2020",
+      "status": "geschlossen",
+      "shipment": {
+        "reference_code": "Jetzt gehe ich schlafen"
+      },
+      "id": 9
     }
   ]
 }
