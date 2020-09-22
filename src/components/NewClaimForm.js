@@ -17,8 +17,8 @@ const NewClaimForm = ({ claims, setClaims }) => {
     }
     claimService
       .create(newClaimObject)
-      .then(res => {
-        setClaims(claims.concat(res.data))
+      .then(initialClaims => {
+        setClaims(claims.concat(initialClaims))
         setNewClaim(newClaimInitialValue)
       })
   }

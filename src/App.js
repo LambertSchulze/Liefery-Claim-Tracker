@@ -9,8 +9,8 @@ const App = () => {
   useEffect(() => {
     claimService
       .getAll()
-      .then(res => {
-        setClaims(res.data)
+      .then(initialClaims => {
+        setClaims(initialClaims)
       })
   }, [])
 

@@ -8,8 +8,8 @@ const ClaimsTable = ({ claims, setClaims }) => {
     const changedClaim = { ...claim, status: claim.status === "geschlossen" ? "wieder geöffnet" : "geschlossen" }
     claimService
       .update(id, changedClaim)
-      .then(res => {
-        setClaims(claims.map(claim => claim.id !== id ? claim : res.data))
+      .then(initialClaims => {
+        setClaims(claims.map(claim => claim.id !== id ? claim : initialClaims))
       })
   }
 
