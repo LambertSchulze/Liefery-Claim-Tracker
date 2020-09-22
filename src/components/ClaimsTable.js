@@ -8,10 +8,12 @@ const ClaimsTable = ({ claims, setClaims }) => {
     const changedClaim = { ...claim, status: claim.status === "geschlossen" ? "wieder geöffnet" : "geschlossen" }
     claimService
       .update(id, changedClaim)
-      .then(initialClaims => {
-        setClaims(claims.map(claim => claim.id !== id ? claim : initialClaims))
+      .then(initialClaims => {setClaims(claims.map(claim => claim.id !== id ? claim : initialClaims))})
+      .catch(error => {
+        alert(`the claim '${claim.id}' was deleted`)
+        setClaims(claims.filter(c => c.id !== id))
       })
-  }
+}
 
   return (
     <table>
