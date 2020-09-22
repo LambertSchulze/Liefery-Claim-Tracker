@@ -3,7 +3,6 @@ import React from 'react'
 
 const ClaimsTable = ({ claims, setClaims }) => {
   const toggleClaimStatus = (id) => {
-    console.log(id)
     const url = `http://localhost:3001/claims/${id}`
     const claim = claims.find((c => c.id === id))
     const changedClaim = { ...claim, status: claim.status === "geschlossen" ? "wieder geöffnet" : "geschlossen" }
