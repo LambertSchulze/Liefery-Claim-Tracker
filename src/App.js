@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     claimService
-      .getAll
+      .getAll()
       .then(res => {
         setClaims(res.data)
       })
