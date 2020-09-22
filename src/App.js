@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import claimService from './services/claims'
 import FilteredClaimsTable from './components/FilteredClaimsTable'
 import NewClaimForm from './components/NewClaimForm'
 
@@ -7,8 +7,8 @@ const App = () => {
   const [claims, setClaims] = useState([])
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3001/claims')
+    claimService
+      .getAll
       .then(res => {
         setClaims(res.data)
       })

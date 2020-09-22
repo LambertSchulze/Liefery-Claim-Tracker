@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import claimService from '../services/claims'
 
 const NewClaimForm = ({ claims, setClaims }) => {
+
   const newClaimInitialValue = 'Reference Code of Shipment'
   const [newClaim, setNewClaim] = useState(newClaimInitialValue)
   
@@ -14,9 +15,8 @@ const NewClaimForm = ({ claims, setClaims }) => {
         reference_code: newClaim
       }
     }
-
-    axios
-      .post('http://localhost:3001/claims', newClaimObject)
+    claimService
+      .create(newClaimObject)
       .then(res => {
         setClaims(claims.concat(res.data))
         setNewClaim(newClaimInitialValue)

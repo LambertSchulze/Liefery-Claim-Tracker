@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import ClaimsTable from './ClaimsTable'
 
 const FilteredClaimsTable = ({ claims, setClaims }) => {
-  const [showClosed, setShowClosed] = useState(true)
-  
+
+  const [showClosed, setShowClosed] = useState(true)  
   const claimsToShow = showClosed ? claims : claims.filter(claim => claim.status !== 'geschlossen')
 
   return (
