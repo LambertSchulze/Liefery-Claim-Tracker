@@ -6,7 +6,7 @@ import NewClaimForm from './components/NewClaimForm'
 
 const App = () => {
   const [claims, setClaims] = useState([])
-  const [errorMessage, setErrorMessage] = useState('Error!')
+  const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
     claimService
