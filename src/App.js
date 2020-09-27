@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import claimService from './services/claims'
 import Notification from './components/Notification'
 import FilteredClaimsTable from './components/FilteredClaimsTable'
@@ -17,12 +18,22 @@ const App = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Claims</h1>
-      <Notification message={errorMessage}/>
-      <FilteredClaimsTable claims={claims} setClaims={setClaims} setErrorMessage={setErrorMessage}/>
-      <NewClaimForm claims={claims} setClaims={setClaims} />
-    </div>
+    <Router>
+      <Notification message={errorMessage} />
+      <main>
+        <Switch>
+          <Route path="/claim/new">
+            <NewClaimForm claims={claims} setClaims={setClaims} />
+          </Route>
+          <Route path="/claims">
+            <FilteredClaimsTable claims={claims} setClaims={setClaims} setErrorMessage={setErrorMessage} />
+          </Route>
+          <Route path="/">
+            <h1>Home</h1>
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   )
 }
 
