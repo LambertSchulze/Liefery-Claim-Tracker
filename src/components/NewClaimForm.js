@@ -3,7 +3,7 @@ import claimService from '../services/claims'
 
 const NewClaimForm = ({ claims, setClaims }) => {
 
-  const newClaimInitialValue = 'Reference Code of Shipment'
+  const newClaimInitialValue = ''
   const [newClaim, setNewClaim] = useState(newClaimInitialValue)
   
   const addClaim = (event) => {
@@ -29,7 +29,46 @@ const NewClaimForm = ({ claims, setClaims }) => {
 
   return (
     <form onSubmit={addClaim}>
-      <input value={newClaim} onChange={handleNewClaimChange}/>
+      <fieldset>
+        <legend>betroffene Sendung</legend>
+        <label>Liefery ID: 
+          <input value={newClaim} onChange={handleNewClaimChange} />
+        </label>
+        <br/>
+        <label>Stadt:
+          <input />
+        </label>
+        <br/>
+        <label>Kurier:
+          <input />
+        </label>
+        <br/>
+        <label>Kurierfirma:
+          <input />
+        </label>
+      </fieldset>
+
+      <label>Beschreibung: 
+        <textarea type="text" />
+      </label>
+      <br/>
+      <label>Kategorie: 
+        <select>
+          <option>Claim</option>
+          <option>Beschwerde</option>
+          <option>Fahrer-Fail</option>
+        </select>
+      </label>
+      <br/>
+      <label>Frist: 
+        <input list="Fristen"/>
+        <datalist id="Fristen">
+          <option>24</option>
+          <option>36</option>
+          <option>48</option>
+        </datalist>
+      </label>
+      <br/>
       <button type="submit">add Claim</button>
     </form>
   )
