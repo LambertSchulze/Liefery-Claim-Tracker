@@ -2,39 +2,35 @@
   "claims": [
     {
       "id": 1,
-      "open_date": "2020-04-01",
-      "category": "Claim",
+      "open_date": "2020-01-01",
+      "close_date": "",
+      "period": "24h",
       "description_internally": "Empfänger meldet Nichterhalt",
-      "deadline": "2020-04-03",
-      "status": "wieder geöffnet",
-      "shipment": {
-        "id": 123456,
-        "reference_code": "ABCDE-12345"
-      }
-    },
-    {
-      "id": 2,
-      "open_date": "2020-05-01",
       "category": "Claim",
-      "description_internally": "Nachbar nicht bekannt",
-      "deadline": "2020-05-03",
-      "status": "geschlossen",
+      "status": "übergeben",
       "shipment": {
-        "id": 123457,
-        "reference_code": "12345-ABCDE"
-      }
-    },
-    {
-      "id": 3,
-      "open_date": "2020-06-01",
-      "category": "Claim",
-      "description_internally": "Pünktlich liefern",
-      "deadline": "2020-06-02",
-      "status": "geschlossen",
-      "shipment": {
-        "id": 123458,
-        "reference_code": "54321-AMBCN"
-      }
+        "reference_code": "ABCDE-12345",
+        "city": "Berlin",
+        "courier": "Paul Sänker",
+        "courier_company": "Die Kuriere"
+      },
+      "history": [
+        {
+          "timestamp": "2020-01-01-08:59:00",
+          "user": 1212,
+          "note": "Claim wurde geöffnet."
+        },
+        {
+          "timestamp": "2020-01-01-09:00:30",
+          "user": 1313,
+          "note": "An Vorarbeiter weitergegeben"
+        },
+        {
+          "temestamp": "2020-01-01-09:05:11",
+          "user": 1313,
+          "note": "Status geändert auf 'übergeben'"
+        }
+      ]
     }
   ]
 }
