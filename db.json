@@ -4,7 +4,7 @@
       "id": 1,
       "open_date": "2020-01-01",
       "close_date": "",
-      "period": "24h",
+      "period": 24,
       "description_internally": "Empfänger meldet Nichterhalt",
       "category": "Claim",
       "status": "übergeben",
