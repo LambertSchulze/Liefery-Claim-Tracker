@@ -11,7 +11,8 @@ const NewTicketForm = ({ tickets, setTickets }) => {
     
     const newTicketObject = {
       status: 'geöffnet',
-      description: newTicketDescription
+      description: newTicketDescription,
+      log: []
     }
     
     ticketsService

@@ -4,15 +4,18 @@
       "id": 1,
       "description": "Empfänger meldet Nichterhalt",
       "status": "geschlossen",
-      "history": [
+      "log": [
         {
-          "note": "Claim wurde geöffnet."
+          "note": "Claim wurde geöffnet.",
+          "user": "Steven Clemmons"
         },
         {
-          "note": "An Vorarbeiter weitergegeben"
+          "note": "An Vorarbeiter weitergegeben",
+          "user": "Lambert Schulze"
         },
         {
-          "note": "Status geändert auf 'übergeben'"
+          "note": "Status geändert auf 'übergeben'",
+          "user": "Steven Clemmons"
         }
       ]
     },
@@ -20,7 +23,7 @@
       "id": 2,
       "description": "Empfänger findet Nachbar nicht",
       "status": "geöffnet",
-      "history": [
+      "log": [
         {
           "note": "Claim wurde geöffnet."
         },
@@ -35,7 +38,14 @@
     {
       "status": "geöffnet",
       "description": "EE meldet Nichterhalt",
-      "id": 3
+      "id": 3,
+      "log": []
+    },
+    {
+      "status": "geöffnet",
+      "description": "Test new ticket",
+      "log": [],
+      "id": 4
     }
   ]
 }
