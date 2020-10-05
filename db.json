@@ -6,16 +6,13 @@
       "status": "geschlossen",
       "log": [
         {
-          "note": "Claim wurde geöffnet.",
-          "user": "Steven Clemmons"
+          "note": "Claim wurde geöffnet."
         },
         {
-          "note": "An Vorarbeiter weitergegeben",
-          "user": "Lambert Schulze"
+          "note": "An Vorarbeiter weitergegeben"
         },
         {
-          "note": "Status geändert auf 'übergeben'",
-          "user": "Steven Clemmons"
+          "note": "Status geändert auf 'übergeben'"
         }
       ]
     },
@@ -40,12 +37,6 @@
       "description": "EE meldet Nichterhalt",
       "id": 3,
       "log": []
-    },
-    {
-      "status": "geöffnet",
-      "description": "Test new ticket",
-      "log": [],
-      "id": 4
     }
   ]
 }

@@ -27,7 +27,7 @@ const App = () => {
             <NewTicketsForm tickets={tickets} setTickets={setTickets} />
           </Route>
           <Route path="/tickets/:id">
-            <SingleTicketView tickets={tickets} />
+            <SingleTicketView tickets={tickets} setTickets={setTickets} />
           </Route>
           <Route path="/tickets">
             <FilteredTicketsTable tickets={tickets} setTickets={setTickets} setErrorMessage={setErrorMessage} />

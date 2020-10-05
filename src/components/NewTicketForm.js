@@ -14,11 +14,10 @@ const NewTicketForm = ({ tickets, setTickets }) => {
       description: newTicketDescription,
       log: []
     }
-    
     ticketsService
       .create(newTicketObject)
-      .then(initialTickets => {
-        setTickets(tickets.concat(initialTickets))
+      .then(returnedTicket => {
+        setTickets(tickets.concat(returnedTicket))
         history.push('/tickets')
       })
   }
