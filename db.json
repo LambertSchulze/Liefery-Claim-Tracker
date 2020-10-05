@@ -36,11 +36,6 @@
       "status": "geöffnet",
       "description": "EE meldet Nichterhalt",
       "id": 3
-    },
-    {
-      "status": "geöffnet",
-      "description": "Test Nummer 4",
-      "id": 4
     }
   ]
 }
