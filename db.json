@@ -1,36 +1,46 @@
 {
-  "claims": [
+  "tickets": [
     {
       "id": 1,
-      "open_date": "2020-01-01",
-      "close_date": "",
-      "period": 24,
-      "description_internally": "Empfänger meldet Nichterhalt",
-      "category": "Claim",
-      "status": "übergeben",
-      "shipment": {
-        "reference_code": "ABCDE-12345",
-        "city": "Berlin",
-        "courier": "Paul Sänker",
-        "courier_company": "Die Kuriere"
-      },
+      "description": "Empfänger meldet Nichterhalt",
+      "status": "geschlossen",
       "history": [
         {
-          "timestamp": "2020-01-01-08:59:00",
-          "user": 1212,
           "note": "Claim wurde geöffnet."
         },
         {
-          "timestamp": "2020-01-01-09:00:30",
-          "user": 1313,
           "note": "An Vorarbeiter weitergegeben"
         },
         {
-          "temestamp": "2020-01-01-09:05:11",
-          "user": 1313,
           "note": "Status geändert auf 'übergeben'"
         }
       ]
+    },
+    {
+      "id": 2,
+      "description": "Empfänger findet Nachbar nicht",
+      "status": "geöffnet",
+      "history": [
+        {
+          "note": "Claim wurde geöffnet."
+        },
+        {
+          "note": "An Vorarbeiter weitergegeben"
+        },
+        {
+          "note": "Status geändert auf 'übergeben'"
+        }
+      ]
+    },
+    {
+      "status": "geöffnet",
+      "description": "EE meldet Nichterhalt",
+      "id": 3
+    },
+    {
+      "status": "geöffnet",
+      "description": "Test Nummer 4",
+      "id": 4
     }
   ]
 }
