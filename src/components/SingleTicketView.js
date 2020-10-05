@@ -12,10 +12,8 @@ const SingleTicketView = ({ tickets }) => {
       <p>{ticket.status}</p>
       <ul>
         {ticket.log.map((l, index) =>
-        {
-          console.log(index)
-          return <li key={index}>{l.note} - {l.user}</li>
-})}
+          <li key={index}>{l.note} - {l.user}</li>
+        )}
       </ul>
     </div>
   )
