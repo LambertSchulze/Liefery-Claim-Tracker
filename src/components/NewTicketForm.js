@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import ticketsService from '../services/tickets'
 
 const NewTicketForm = ({ tickets, setTickets }) => {
-
   const [newTicketDescription, setNewTicketDescription] = useState('')
-  
+  const history = useHistory()
+
   const addTicket = (event) => {
     event.preventDefault()
     
@@ -17,7 +18,7 @@ const NewTicketForm = ({ tickets, setTickets }) => {
       .create(newTicketObject)
       .then(initialTickets => {
         setTickets(tickets.concat(initialTickets))
-        setNewTicketDescription('')
+        history.push('/tickets')
       })
   }
 
