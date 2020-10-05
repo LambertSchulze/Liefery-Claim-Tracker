@@ -34,6 +34,7 @@ const NewTicketForm = ({ tickets, setTickets }) => {
           <input value={newTicketDescription} onChange={handleNewTicketDescriptionChange} />
         </label>
       </fieldset>
+      <button type="reset" onClick={() => history.goBack()}>cancel</button>
       <button type="submit">add Claim</button>
     </form>
   )

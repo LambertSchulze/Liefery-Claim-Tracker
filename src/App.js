@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom'
 import ticketsService from './services/tickets'
 import Notification from './components/Notification'
 import FilteredTicketsTable from './components/FilteredTicketsTable'
@@ -31,6 +31,7 @@ const App = () => {
           </Route>
           <Route path="/tickets">
             <FilteredTicketsTable tickets={tickets} setTickets={setTickets} setErrorMessage={setErrorMessage} />
+            <Link to="/tickets/new">New Ticket</Link>
           </Route>
           <Route path="/">
             <h1>Home</h1>
