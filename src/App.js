@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import claimService from './services/claims'
+import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom'
+import ticketsService from './services/tickets'
 import Notification from './components/Notification'
-import FilteredClaimsTable from './components/FilteredClaimsTable'
-import NewClaimForm from './components/NewClaimForm'
+import FilteredTicketsTable from './components/FilteredTicketsTable'
+import NewTicketsForm from './components/NewTicketForm'
+import SingleTicketView from './components/SingleTicketView'
 
 const App = () => {
-  const [claims, setClaims] = useState([])
+  const [tickets, setTickets] = useState([])
   const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
-    claimService
+    ticketsService
       .getAll()
-      .then(initialClaims => {
-        setClaims(initialClaims)
+      .then(initialTickets => {
+        setTickets(initialTickets)
       })
   }, [])
 
@@ -22,11 +23,14 @@ const App = () => {
       <Notification message={errorMessage} />
       <main>
         <Switch>
-          <Route path="/claim/new">
-            <NewClaimForm claims={claims} setClaims={setClaims} />
+          <Route path="/tickets/new">
+            <NewTicketsForm tickets={tickets} setTickets={setTickets} />
           </Route>
-          <Route path="/claims">
-            <FilteredClaimsTable claims={claims} setClaims={setClaims} setErrorMessage={setErrorMessage} />
+          <Route path="/tickets/:id">
+            <SingleTicketView tickets={tickets} />
+          </Route>
+          <Route path="/tickets">
+            <FilteredTicketsTable tickets={tickets} setTickets={setTickets} setErrorMessage={setErrorMessage} />
           </Route>
           <Route path="/">
             <h1>Home</h1>
