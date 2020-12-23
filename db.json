@@ -37,6 +37,19 @@
       "description": "EE meldet Nichterhalt",
       "id": 3,
       "log": []
+    },
+    {
+      "status": "geöffnet",
+      "description": "test for history push",
+      "log": [
+        {
+          "note": "first komment"
+        },
+        {
+          "note": "second comment"
+        }
+      ],
+      "id": 4
     }
   ]
 }
