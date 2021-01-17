@@ -1,4 +1,4 @@
-<img src="README_assets/Liefery-Logo.png" align="right" width="150" />
+<img src="https://raw.githubusercontent.com/LambertSchulze/Liefery-Claim-Tracker/master/README_assets/Liefery_Logo.png" align="right" width="150" />
 
 # Liefery-Claim-Tracker
 Ein einfaches Ticket System für die Team-übergreifende Bearbeitung von Claims.
@@ -10,7 +10,7 @@ Ein einfaches Ticket System für die Team-übergreifende Bearbeitung von Claims.
 Dieses einfache Ticket System sollte ein gemeinsamer Ort verschiedener Teams zum bearbeiten von Claims sein.
 Ziel sollte eine gemeinsame Übersicht für die Anzahl der offenen Claims und deren Stand sein.
 
-<img src="TicketSystemDashboard.png" align="center" />
+<img src="https://github.com/LambertSchulze/Liefery-Claim-Tracker/blob/master/README_assets/Ticket%20System%20Dashboard.png" align="center" />
 
 ### Umfang des Projekts
 [x] Client im Material Design (einheitlich mit anderem Liefery-Frontent)
