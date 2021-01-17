@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import ticketsService from '../services/tickets'
+import Input from '@material-ui/core/Input'
+import Button from '@material-ui/core/Button'
+
 
 const NewTicketForm = ({ tickets, setTickets }) => {
   const [newTicketDescription, setNewTicketDescription] = useState('')
@@ -18,7 +21,7 @@ const NewTicketForm = ({ tickets, setTickets }) => {
       .create(newTicketObject)
       .then(returnedTicket => {
         setTickets(tickets.concat(returnedTicket))
-        history.push('/tickets')
+        history.push('/')
       })
   }
 
@@ -28,14 +31,10 @@ const NewTicketForm = ({ tickets, setTickets }) => {
 
   return (
     <form onSubmit={addTicket}>
-      <fieldset>
-        <legend>Neuer Claim</legend>
-        <label>Description 
-          <input value={newTicketDescription} onChange={handleNewTicketDescriptionChange} />
-        </label>
-      </fieldset>
-      <button type="reset" onClick={() => history.goBack()}>cancel</button>
-      <button type="submit">add Claim</button>
+      <Input placeholder="Description" value={newTicketDescription} onChange={handleNewTicketDescriptionChange} />
+
+      <Button type="reset" onClick={() => history.goBack()}>cancel</Button>
+      <Button type="submit">create Ticket</Button>
     </form>
   )
 }

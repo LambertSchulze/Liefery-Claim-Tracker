@@ -6,13 +6,16 @@
       "status": "geschlossen",
       "log": [
         {
-          "note": "Claim wurde geöffnet."
+          "note": "Claim wurde geöffnet.",
+          "user": "Steve"
         },
         {
-          "note": "An Vorarbeiter weitergegeben"
+          "note": "An Vorarbeiter weitergegeben",
+          "user": "Bob"
         },
         {
-          "note": "Status geändert auf 'übergeben'"
+          "note": "Status geändert auf 'übergeben'",
+          "user": "Bob"
         }
       ]
     },
@@ -22,13 +25,16 @@
       "status": "geöffnet",
       "log": [
         {
-          "note": "Claim wurde geöffnet."
+          "note": "Claim wurde geöffnet.",
+          "user": "Steve"
         },
         {
-          "note": "An Vorarbeiter weitergegeben"
+          "note": "An Vorarbeiter weitergegeben",
+          "user": "Bob"
         },
         {
-          "note": "Status geändert auf 'übergeben'"
+          "note": "Status geändert auf 'übergeben'",
+          "user": "Bob"
         }
       ]
     },
@@ -36,17 +42,23 @@
       "status": "geöffnet",
       "description": "EE meldet Nichterhalt",
       "id": 3,
-      "log": []
+      "log": [
+        {
+          "note": "Test Kommentar"
+        }
+      ]
     },
     {
       "status": "geöffnet",
       "description": "test for history push",
       "log": [
         {
-          "note": "first komment"
+          "note": "1. Kommentar",
+          "user": "Susi"
         },
         {
-          "note": "second comment"
+          "note": "2. Kommentar",
+          "user": "Bob"
         }
       ],
       "id": 4

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ticketsService from './services/tickets'
 import Notification from './components/Notification'
-import FilteredTicketsTable from './components/FilteredTicketsTable'
-import NewTicketsForm from './components/NewTicketForm'
-import SingleTicketView from './components/SingleTicketView'
+import NewTicket from './pages/NewTicket'
+import SingleTicket from './pages/SingleTicket'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   const [tickets, setTickets] = useState([])
@@ -24,17 +24,13 @@ const App = () => {
       <main>
         <Switch>
           <Route path="/tickets/new">
-            <NewTicketsForm tickets={tickets} setTickets={setTickets} />
+            <NewTicket tickets={tickets} setTickets={setTickets} />
           </Route>
           <Route path="/tickets/:id">
-            <SingleTicketView tickets={tickets} setTickets={setTickets} />
-          </Route>
-          <Route path="/tickets">
-            <FilteredTicketsTable tickets={tickets} setTickets={setTickets} setErrorMessage={setErrorMessage} />
-            <Link to="/tickets/new">New Ticket</Link>
+            <SingleTicket tickets={tickets} setTickets={setTickets} />
           </Route>
           <Route path="/">
-            <h1>Home</h1>
+            <Dashboard tickets={tickets} setTickets={setTickets} setErrorMessage={setErrorMessage}/>
           </Route>
         </Switch>
       </main>
